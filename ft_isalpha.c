@@ -13,15 +13,10 @@
 #include "libft.h"
 #include <stdio.h>
 #include <ctype.h>
+
 int ft_isalpha(int c)
 {
-	int	is_lower;
-	int	is_capital;
-
-	is_lower = (c >= 'a' && c <= 'z');
-	is_capital = (c >= 'A' && c <= 'Z');
-   	
-	return (is_lower || is_capital);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 
 int main()
