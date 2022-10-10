@@ -16,20 +16,20 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		{
 			return (first_s - second_s);
 		}
-		else if (first_s == '\0' || second_s == '\0')
+		else if (first_s == '\0' && second_s == '\0')
 		{
 			return (0);
 		}
 		i++;
 	}
-	return(0);
+	return (0);
 }
-
+/*
 int main()
 {
-	const char s1[] = "";
-	const char s2[] = "";
+	const char s1[] = "lemonade";
+	const char s2[] = "ba";
 	size_t n = 3;
 	printf("%d\n", ft_strncmp(s1, s2, n));
 	printf("%d\n", strncmp(s1, s2, n));
-}
+}*/

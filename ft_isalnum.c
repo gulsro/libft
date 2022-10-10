@@ -14,15 +14,22 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'Z' && c <= 'Z') || (c >= '0' && c <= '9'));
+	int	is_lower;
+	int	is_capital;
+	int	is_number;
 
+	is_lower = (c >= 'a' && c <= 'z');
+	is_capital = (c >= 'Z' && c <= 'Z');
+	is_number = (c >= '0' && c <= '9');
+	return (is_lower || is_capital || is_number);
 }
-
+/*
 int main ()
 {
 	int  c = '7';
 	printf("%d\n", ft_isalnum(c));
 	printf("%d\n", isalnum(c));
 }
+*/

@@ -25,9 +25,10 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
+/*
 int main ()
 {
     const char* s = "bananaaaa";
     printf("%zu\n", ft_strlen(s));
     printf("%zu\n", strlen(s));
-}
+}*/

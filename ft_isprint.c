@@ -18,9 +18,10 @@ int	ft_isprint(int c)
 {
 	return ((c >= 32) && (c <= 126));
 }
+/*
 int main ()
 {
     int  c = 43;
     printf("%d\n", ft_isprint(c));
     printf("%d\n", isprint(c));
-}
+}*/
