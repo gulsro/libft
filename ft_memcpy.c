@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 13:27:16 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/10 16:34:40 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/10 16:53:55 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		dst_y[i] = src_y[i];
 		i++;
 	}
-	return (dst_y);
+	return (dst);
 }
 
 int main()
 {
 	size_t n = 3;
 	char dst[10] = "banan";
-	const char src[] = "banan";
+	const char src[] = "";
 
 	printf("%s\n", ft_memcpy(dst, src, n));
 	printf("%s\n", memcpy(dst, src, n));
