@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 13:27:16 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/10 15:57:48 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/10 16:34:40 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
 	char	*dst_y;
 	const char	*src_y;
 
@@ -34,8 +34,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 int main()
 {
 	size_t n = 3;
-	char dst[10] = "";
-	const char src[] = "";
+	char dst[10] = "banan";
+	const char src[] = "banan";
 
 	printf("%s\n", ft_memcpy(dst, src, n));
 	printf("%s\n", memcpy(dst, src, n));
