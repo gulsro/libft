@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 18:29:28 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/10 18:56:53 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/11 13:46:45 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	const unsigned char	*s;
+	const unsigned char	*ptr;
 
+	ptr = s; 
 	i = 0;
 	while (i < n)
 	{
-		if (s[i] == (unsigned char)c)
+		if (ptr[i] == (const unsigned char) c)
 		{
-			return ((unsigned char *)s + i);
+			return ((void *)s + i);
 		}
 		i++;
 	}
@@ -32,9 +33,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 int main()
 {
-        const unsigned char s[] = "banana";
-        int c = 'e';
-		size_t n = 7;
+        const unsigned char s[] = "lemonade";
+        int c = 'n';
+		size_t n = 3;
         printf("%s\n", ft_memchr(s, c, n));
         printf("%s\n", memchr(s, c, n));
 }
