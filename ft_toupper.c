@@ -15,4 +15,5 @@ int main()
 	int c = '8';
         printf("%c\n", ft_toupper(c));
         printf("%c\n", toupper(c));
-}*
+}
+*/
