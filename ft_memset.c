@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/13 11:57:08 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/13 14:25:23 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/17 14:14:51 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -25,9 +25,8 @@ void	*ft_memset(void *b, int c, size_t len)
 		i++;
 	}
 	return (b);
-
 }
-
+/*
 int main()
 {
 	size_t  len = 9;
@@ -38,3 +37,4 @@ int main()
 	printf("%s\n", memset(b, c, len));
 		
 }
+*/
