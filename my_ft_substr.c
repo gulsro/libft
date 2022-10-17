@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   my_ft_substr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/10 13:27:16 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/17 14:16:08 by gozturk       ########   odam.nl         */
+/*   Created: 2022/10/13 16:35:41 by gozturk       #+#    #+#                 */
+/*   Updated: 2022/10/14 16:31:33 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
-#include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*my_ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*sub;
 	size_t	i;
-	char	*dst_y;
-	const char	*src_y;
 
-	dst_y = dst;
-	src_y = src;
 	i = 0;
-	while (i < n)
+
+	sub = (char *)malloc(sizeof(char) * (len + 1));
+	if (!sub)
+			return (NULL);
+	while (len > 0)
 	{
-		dst_y[i] = src_y[i];
+		sub[i] = s[start];
 		i++;
+		start++;
+		len--;
 	}
-	return (dst);
+	return (sub);
 }
-/*
+
 int main()
 {
-	size_t n = 3;
-	char dst[10] = "banan";
-	const char src[] = "lemonade";
+	char const *s = "banana";
+	unsigned int start = 6;
+	size_t len = 3;
 
-	printf("%s\n", ft_memcpy(dst, src, n));
-	printf("%s\n", memcpy(dst, src, n));
+	printf("%s\n", ft_substr(s, start, len));
 }
-*/

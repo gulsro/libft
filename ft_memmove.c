@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/12 17:11:38 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/12 19:20:02 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/17 14:17:28 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,27 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	
 	d = dst;
 	s = src;
-	if (!d && !s)
-			return (0);
+	if (!d && !s)		//??
+			return (0); 
 	if (d < s)
-			memcmp(d, s, len);
+			memcpy(d, s, len);
 	else if (d > s)
 			while (len)
 			{
 				d[len - 1] = s[len - 1];
 				len--;
 			}
-				return (dst);
+			return (dst);
 
 }
+/*
 int main()
 {
-    size_t n = 3;
-    char dst[8] = "";
-    const char src[] = "";
+    size_t n = 2;
+    char dst[18] = "";
+    char src[] = "na";
 
     printf("%s\n", ft_memmove(dst, src, n));
     printf("%s\n", memmove(dst, src, n));
 }
+*/

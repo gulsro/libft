@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 17:42:12 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/10 18:27:45 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/17 14:18:56 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     }
 	return (0);
 }
-
+/*
 int main()
 {
     size_t n = 3;
@@ -42,3 +42,4 @@ int main()
     printf("%d\n", ft_memcmp(s1, s2, n));
     printf("%d\n", memcmp(s1, s2, n));
 }
+*/

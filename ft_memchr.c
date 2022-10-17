@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 18:29:28 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/11 13:46:45 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/17 14:18:18 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
+/*
 int main()
 {
         const unsigned char s[] = "lemonade";
@@ -39,3 +39,4 @@ int main()
         printf("%s\n", ft_memchr(s, c, n));
         printf("%s\n", memchr(s, c, n));
 }
+*/

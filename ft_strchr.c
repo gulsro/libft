@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (0);
 }
-
+/*
 int main()
 {
         const char s[] = "banana";
@@ -26,4 +26,4 @@ int main()
         printf("%s\n", ft_strchr(s, c));
         printf("%s\n", strchr(s, c));
 }
-
+*/

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int	ift_toupper(int c)
+int	ft_toupper(int c)
 {
 	if ((c >= 'a') && (c <= 'z'))
 	{

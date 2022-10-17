@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/13 14:29:16 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/14 12:42:04 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/17 14:20:39 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_calloc(size_t count, size_t size)
 	memset(ptr, 0, count * size);
 	return (ptr);	
 }
-
+/*
 int main()
 {
 	size_t size;
@@ -34,5 +34,5 @@ int main()
 	count = 5;
 	printf("%s\n", ft_calloc(count, size));
 	printf("%s\n", calloc(count, size));
-
 }
+*/

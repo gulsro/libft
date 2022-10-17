@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 15:04:47 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/14 16:36:20 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/17 14:21:15 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     }
     return (sub);
 }
-
+/*
 int main()
 {
     char const *s = "lemonade";
@@ -47,3 +47,4 @@ int main()
 
     printf("%s\n", ft_substr(s, start, len));
 }
+*/

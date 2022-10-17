@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 13:35:03 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/14 14:04:16 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/17 14:20:58 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strdup(const char *s1)
 		return (dst);
 
 }
-
+/*
 int main()
 {
 	const char s1[13] = "lemonade";
@@ -34,3 +34,4 @@ int main()
 	printf("%s\n", ft_strdup(s1));
 	printf("%s\n", strdup(s1));
 }
+*/

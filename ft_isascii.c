@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   ft_isascii.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/10 13:27:16 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/17 14:16:08 by gozturk       ########   odam.nl         */
+/*   Created: 2022/10/08 15:31:40 by gozturk       #+#    #+#                 */
+/*   Updated: 2022/10/17 14:27:29 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_isascii(int c)
 {
-	size_t	i;
-	char	*dst_y;
-	const char	*src_y;
-
-	dst_y = dst;
-	src_y = src;
-	i = 0;
-	while (i < n)
-	{
-		dst_y[i] = src_y[i];
-		i++;
-	}
-	return (dst);
+	return ((c >= 0) && (c <= 127));
 }
 /*
-int main()
+int main ()
 {
-	size_t n = 3;
-	char dst[10] = "banan";
-	const char src[] = "lemonade";
-
-	printf("%s\n", ft_memcpy(dst, src, n));
-	printf("%s\n", memcpy(dst, src, n));
+    int  c = 129;
+    printf("%d\n", ft_isascii(c));
+    printf("%d\n", isascii(c));
 }
 */
