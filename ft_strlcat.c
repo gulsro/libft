@@ -15,26 +15,34 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_len = strlen(dst);
 	i = 0;
 	j = dst_len;
-	if (dst_len == 0 || src_len == 0)
-			return (dst_len + dst_len);
-	if (dstsize > (dst_len + strlen(src)))
-		while (dst && src)
+	
+// CHECK THE MANUAL AGAIN
+	while (dstsize >= src_len + dst_len + 1)
+	{
+		if (dst[j] == 0 && src[i] == 0)
+			return (dst_len + src_len);
+		while (dst[j] && src[i])
 		{
 			dst[j] = src[i];
 			i++;
 			j++;
 		}
+		dst[j] = '\0';
 		result = strlen(dst);
 		return (result);
+	}
 }
 int main ()
 {
-	char dst[35] = "banana";
+	char dst[15] = "banana";
 	const char src[] = "lemonade";
-	size_t	dstsize = 35;
+	size_t	dstsize = 5;
 
 	printf("%lu\n", ft_strlcat(dst, src, dstsize));
-	printf("%lu\n", strlcat(dst, src, dstsize));
+	printf("%s\n", dst);
+	char ds[15] = "banana";
+	printf("%lu\n", strlcat(ds, src, dstsize));
+	printf("%s\n", ds);
 
 }
 
