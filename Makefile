@@ -6,20 +6,15 @@
 #    By: gozturk <gozturk@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/11 18:39:50 by gozturk       #+#    #+#                  #
-#    Updated: 2022/10/17 14:27:58 by gozturk       ########   odam.nl          #
+#    Updated: 2022/10/19 15:21:06 by gozturk       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 TARGET = libft.a
 
-SRC = ft_atoi.c ft_isprint.c ft_strchr.c ft_strrchr.c\
-		ft_bzero.c ft_memchr.c ft_strdup.c ft_substr.c\
-		ft_calloc.c ft_memcmp.c ft_strlcat.c ft_tolower.c\
-		ft_isalnum.c ft_memcpy.c ft_strlen.c ft_toupper.c\
-		ft_isdigit.c ft_memset.c  ft_isalpha.c ft_memmove.c\
-		ft_strncmp.c ft_isascii.c
+SRC = $(wildcard *.c)
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
