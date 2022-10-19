@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/08 15:21:57 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/17 14:28:54 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/19 17:58:50 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isalnum(int c)
 	int	is_number;
 
 	is_lower = (c >= 'a' && c <= 'z');
-	is_capital = (c >= 'Z' && c <= 'Z');
+	is_capital = (c >= 'A' && c <= 'Z');
 	is_number = (c >= '0' && c <= '9');
 	return (is_lower || is_capital || is_number);
 }

@@ -6,30 +6,31 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/10 17:42:12 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/17 14:18:56 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/19 17:46:37 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    size_t  i;
-    const unsigned char *first;
-    const unsigned char *second;
+	size_t				i;
+	const unsigned char	*first;
+	const unsigned char	*second;
 
-    first = s1;
-    second = s2;
-    i = 0;
-    while (i < n)
-    {
-        if (first[i] != second[i])
-        {
-            return (first[i] - second[i]);
-        }
-        i++;
-    }
+	first = s1;
+	second = s2;
+	i = 0;
+	while (i < n)
+	{
+		if (first[i] != second[i])
+		{
+			return (first[i] - second[i]);
+		}
+		i++;
+	}
 	return (0);
 }
 /*

@@ -6,9 +6,12 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 15:32:47 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/17 14:26:50 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/19 17:36:56 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef LIBFT_H
+#define LIBFT_H
 
 #include <stdlib.h>
 
@@ -50,3 +53,4 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+#endif

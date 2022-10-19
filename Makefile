@@ -6,11 +6,11 @@
 #    By: gozturk <gozturk@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/11 18:39:50 by gozturk       #+#    #+#                  #
-#    Updated: 2022/10/19 15:21:06 by gozturk       ########   odam.nl          #
+#    Updated: 2022/10/19 17:35:33 by gozturk       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET = libft.a
+NAME = libft.a
 
 SRC = $(wildcard *.c)
 
@@ -23,18 +23,20 @@ OBJ = $(SRC:.c=.o)
 %.o : %.c
 			$(CC) $(CFLAGS) -c $< -o $@
 
-all : $(TARGET)
+all : $(NAME)
 
-$(TARGET) : $(OBJ)
+$(NAME) : $(OBJ)
 			ar rc $@ $? 
 
 clean :
 			rm -f $(OBJ)
 
-fclean :
-			rm -f $(TARGET)
+fclean :	clean
+			rm -f $(NAME)
 
 re : fclean all
+
+.PHONY = all clean fclean re
 
 
 
