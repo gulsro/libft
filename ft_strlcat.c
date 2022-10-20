@@ -25,13 +25,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_len = strlen(dst);
 	i = 0;
 	j = dst_len;
-	if (src_len == 0)
-		return (dst_len + src_len);
 	if (dstsize < dst_len + 1)
 		return (dstsize + src_len); // why not DSTLEN + srclen?
+
 	if (dstsize > dst_len + 1)
 	{
-		while (src[i] != '\0' && i < (dstsize - dst_len - 1)) 
+		while (*src && i < (dstsize - dst_len - 1)) 
 		{
 			dst[j] = src[i];
 			i++;
@@ -45,16 +44,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 /*
 int main ()
 {
-	char dst[15] = "banana";
-	const char src[] = "lemonade";
-	size_t	dstsize = 4;
+	char dst[10] = "b";
+	const char src[] = "lemo nade strawberrymilkshake";
+	size_t	dstsize = 5;
 
 	printf("%lu\n", ft_strlcat(dst, src, dstsize));
 	printf("%s\n", dst);
-	char ds[15] = "banana";
+	char ds[15] = "b";
 	printf("%lu\n", strlcat(ds, src, dstsize));
 	printf("%s\n", ds);
-	printf("%s\n", src);
 
 }
 */
