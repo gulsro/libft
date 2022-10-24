@@ -7,8 +7,8 @@ char	*ft_strrchr(const char *s, int c)
 	int	len;
 
 	i = 0;
-	len = strlen(s) + 1;
-	while (i < len)
+	len = strlen(s);
+	while (i <= len)
 	{
 		if (s[len - i] == (char)c)
 		{
@@ -16,13 +16,14 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 int main()
 {
-        const char s[] = "binine";
-        int c = 'i';
+        const char s[] = "banana";
+        int c = '';
         printf("%s\n", ft_strrchr(s, c));
         printf("%s\n", strrchr(s, c));
-}*/
+}
+*/
