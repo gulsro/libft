@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 14:53:39 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/19 16:55:05 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/24 15:46:32 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	j;
+//	size_t	j;
 	size_t	src_len;
 
 	i = 0;
