@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 15:04:47 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/17 14:21:15 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/24 17:56:04 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,26 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 			return (strdup(""));
 	if (start + len > s_len)
 			len = s_len - start;
-	sub = (char *)malloc(sizeof(char) * (len + 1));
-	if (!sub)
-            return (NULL);
-    while (len > 0)
+	if (!s)
+			return 
+	sub = (char	*)malloc(sizeof(char) * (len + 1));
+	if (sub == 0)
+            return (0);
+    while (s[start] != '\0' && i <= len)
     {
         sub[i] = s[start];
         i++;
         start++;
-        len--;
     }
+	sub[i] = '\0';
     return (sub);
 }
 /*
 int main()
 {
     char const *s = "lemonade";
-    unsigned int start = 10;
-    size_t len = 10;
+    unsigned int start = 9;
+    size_t len = 4;
 
     printf("%s\n", ft_substr(s, start, len));
 }
