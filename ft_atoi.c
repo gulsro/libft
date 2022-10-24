@@ -16,15 +16,15 @@
 
 int	is_space(char c)
 {
-	return (c == ' ' || c == 'f' || c == 'n'
-		|| c == 'r' || c == 't' || c == 'v');
+	return (c == ' ' || c == '\f' || c == '\n'
+		|| c == '\r' || c == '\t' || c == '\v');
 }
 
 int	ft_atoi(const char *str)
 {
-	int					i;
+	int			i;
 	unsigned long int	n;
-	int					sign;
+	int			sign;
 
 	i = 0;
 	n = 0;
@@ -50,7 +50,7 @@ int	ft_atoi(const char *str)
 /*
 int main()
 {
-	const char s[] = "  -+++-3475857";
+	const char s[] = "2147483649";
 	printf("%d\n", ft_atoi(s));
 	printf("%d\n", atoi(s));
 }
