@@ -13,31 +13,54 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-char	ft_strtrim(char const *s1, char const *set)
+
+static	int	char_in_s1(char const *s1, char c)
+{
+	int	i;
+	
+	i = 0;
+	while (*s1)
+	{
+		if (s1[i] == c)
+			return (1);
+	}
+	return (0);
+}
+
+static	char	*position_index(char const *s1, char c)
+{
+	int	i;
+
+	i = 0;
+	while (*s1)
+	{
+		if (s1[i] != c)
+			i++;	
+	}
+	return ((char *)(s1 + i));	
+}
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
 	int	len;
-	char	*ptr;
-
-	len = strlen(s1);
-	ptr = malloc(len + 1);
+	char	*s2;
+	
 	i = 0;
 	j = 0;
-	while (s1[j] != '\0')
+	len = strlen(s1);
+	s2 = (char *)malloc(len + 1);
+	while (char_in_s1(s1, set[i]))
 	{
-		if (set[i] != s1[j] && set[i] != '\0')
-		{	
-			i++;
-		}
-		i = 0;
-		j++;	
-		ptr[i] = s1[i];
-		
-		if (set[i] == s1[len -1])
-			i++;
-			len--;
-		ptr[len - 1] = set[len];	
+		i++;
+		s2 = position_index(s1, set[i]);
 	}
-	return (*ptr);
+	return (s2);
+}
+
+int main()
+{
+	char const s1[] = "lemonade";
+	char const set[] = "me";
+	printf("%s\n", ft_strtrim(s1, set));
 }
