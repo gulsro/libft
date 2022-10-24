@@ -10,10 +10,11 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
-
+/*
 int main()
 {
 	char *s = "banana";
 	int fd = 1;
 	ft_putendl_fd(s, fd);
 }
+*/
