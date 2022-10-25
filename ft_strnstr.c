@@ -26,12 +26,17 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			return (char *)(haystack);
 	if (len_h < len_n)
 			return (0);
-	while (i < len)
+	while (haystack[i] && i < len)
 	{
-		if (memcmp(haystack, needle, len) == 0)
-		{
-			return (char *)(haystack + i);
-		}
+		if (haystack[i] == needle[0])
+			if (strncmp(haystack + i, needle, len_n) == 0)
+			{
+				if (i+len_n > len)
+				{
+					return (0);
+				}
+				return (char *)(haystack + i);
+			}
 		i++;
 	}
 	return (0);
@@ -40,8 +45,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 int main()
 {
 	const char haystack[] = "lemonade";
-	const char needle[] = "on";
-	size_t len = 3;
+	const char needle[] = "ona";
+	size_t len = 5;
 	printf("%s\n", ft_strnstr(haystack, needle, len));
 	printf("%s\n", strnstr(haystack, needle, len));
 }
