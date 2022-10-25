@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/13 14:29:16 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/17 14:20:39 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/25 11:54:13 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr;
 
 	ptr = malloc(count * size);
-//	if (ptr == NULL) ??
-//			return (ptr);
+	if (ptr == NULL) 
+			return (NULL);
 	memset(ptr, 0, count * size);
 	return (ptr);	
 }
