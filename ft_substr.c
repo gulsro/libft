@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 15:04:47 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/24 17:56:04 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/25 16:34:51 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 
 	s_len = strlen(s);
         i = 0;
-	if (start >= s_len || start < 0 || len <= 0)
-			return ("");
-	if (start + len > s_len)
-			len = s_len - start;
 	if (!s)
-			return (0); 
-	sub = (char	*)malloc(sizeof(char) * (len + 1));
+			return (0);
+	if (start >= s_len || start < 0 || len <= 0)
+			return (strdup(""));
+	if (start + len > s_len)
+			len = s_len - start; 
+	sub = (char	*)malloc(len + 1);
 	if (!sub)
             return (0);
 	while (s[start] != '\0' && i < len)
