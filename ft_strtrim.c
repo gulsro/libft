@@ -6,13 +6,13 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:33:17 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/26 14:57:48 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/27 13:49:03 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static	int	is_in_set(char const *set, char c)
 {
@@ -30,12 +30,27 @@ static	int	is_in_set(char const *set, char c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	
+	int	i;
+	char *newstr;
+	char *first;
+	char *last;
+
+	i = 0;
+	first = (char *)s1;
+	last = first + strlen(s1);
+	if (s1 == 0)
+			return (0);
+	while (first && is_in_set(set, *first))
+			first++;
+	while (first < last && is_in_set(set, *last))
+			last--;
+	newstr = ft_substr(first, 0, last - first);
+	return (newstr);
 }
 
 int main()
 {
 	char const s1[] = "lemonade";
-	char const set[] = "me";
+	char const set[] = "ona";
 	printf("%s\n", ft_strtrim(s1, set));
 }
