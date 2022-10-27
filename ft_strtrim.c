@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:33:17 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/27 13:49:03 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/27 16:41:45 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,43 +14,32 @@
 #include <string.h>
 #include "libft.h"
 
-static	int	is_in_set(char const *set, char c)
-{
-	int	i;
-	
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	char *newstr;
-	char *first;
-	char *last;
-
-	i = 0;
-	first = (char *)s1;
-	last = first + strlen(s1);
-	if (s1 == 0)
+	int		start;
+	int		end;
+	char	*newstr;
+	char	*temp;
+	
+	start = 0;
+	temp = (char *)s1;
+	end = strlen(temp) - 1;
+	if (!s1)
 			return (0);
-	while (first && is_in_set(set, *first))
-			first++;
-	while (first < last && is_in_set(set, *last))
-			last--;
-	newstr = ft_substr(first, 0, last - first);
+	if (!set)
+			return (temp);
+	while (temp[start] && strchr(set, temp[start]))
+			start++;
+	while (temp[end] && strchr(set, temp[end]))
+			end--;
+	newstr = ft_substr(temp, start, (end - start + 1));
 	return (newstr);
 }
-
+/*
 int main()
 {
-	char const s1[] = "lemonade";
-	char const set[] = "ona";
+	char const s1[] = "";
+	char const set[] = "";
 	printf("%s\n", ft_strtrim(s1, set));
 }
+*/
