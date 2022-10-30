@@ -10,21 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
-	char *dst;
+	char	*dst;
 	size_t	len;
 
-	len = strlen(s1) + 1;
+	len = ft_strlen(s1) + 1;
 	dst = (char *)malloc(sizeof(char) * (len));
 	if (dst)
-		memcpy(dst, s1, len);
-		return (dst);
-
+		ft_memcpy(dst, s1, len);
+	return (dst);
 }
 /*
 int main()
