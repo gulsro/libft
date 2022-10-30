@@ -14,6 +14,8 @@ static int	how_many_words(char *s, char c)
 		count++;
 		i++;
 	}
+	if (s[ft_strlen(s)] == c)
+		return (count);
 	return (count + 1);
 }
 */
@@ -21,52 +23,44 @@ static int	how_many_words(char *s, char c)
 
 static	int	find_position(char *s, char c)
 {
-	int	i;
 	char	*ptr;
 
-	i = 0;
-	while (s[i])
+	while (s)
 	{
-		if (s[i] != c)
-			i++;
-		ptr = ft_strchr(s, c);
-		return (ptr);
+		if (ft_strchr(s, c) != 0)
+			return (ptr)
 	}
-	
+	return (0);
 }
 
 
-
-
-
-
-/*
 char **ft_split(char const *s, char c)
 {
 	char	**result;
-	int	*count;
+	char	*ptr;
 	int	i;
+	int	j;
 	
-	*count = 0;
-	int = 0;
-	while (s[i])
+	i = 0;
+	j = 0;
+	if (ft_strchr(s, c) != 0)
 	{
-		if (s[i] == c)
+		while (i <= ft_)	
+		while (s[i] != ptr)
+		{
+			result[j][i] =s[i];
+			i++;
+		}
+		j++;
 		
 	}
 
 }
-*/
-char **ft_split(char const *s, char c)
-{
-	int	len;
-	
-	len = ft_strlen(s);
-	
-}
 
+/*
 int main ()
 {
 	char *s = "bananastrawberrylemonade";
 	char c = a;
 }
+*/

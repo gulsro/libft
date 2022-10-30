@@ -1,28 +1,28 @@
 #include <string.h>
 #include <stdio.h>
-
+#include "libft.h"
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+//	int	i;
 	int	len;
 
-	i = 0;
-	len = strlen(s);
-	while (i <= len)
+//	i = 0;
+	len = ft_strlen(s);
+	while (0 <= len)
 	{
-		if (s[len - i] == (char)c)
+		if (s[len] == (char)c)
 		{
-			return ((char *)(s + (len - i)));
+			return ((char *)(s + len));
 		}
-		i++;
+		len--;
 	}
 	return (NULL);
 }
 /*
 int main()
 {
-        const char s[] = "banana";
-        int c = '';
+        const char s[10] = "bananalar";
+        int c = 'a';
         printf("%s\n", ft_strrchr(s, c));
         printf("%s\n", strrchr(s, c));
 }
