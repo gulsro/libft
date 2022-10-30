@@ -1,66 +1,79 @@
-#include <libft.h>
-/*
-static int	how_many_words(char *s, char c)
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
+
+// :%s/foo/bar/g
+
+int find_str_pos(const char* input_str, int start, char c)
 {
-	int	i;
-	int	count;
+    if (start < 0 || start >= (int)ft_strlen(input_str))
+    {
+        return -1;
+    }
+    int pos = start;
+    
+    while(*(input_str + pos) != '\0')
+    {
+        if (*(input_str + pos) == c)
+        {
+            return pos;
+        }
+        pos++;
+    }
+    return -1;
+}
+void get_substr(const char* input_str, char* dest, int start, int len)
+{
+    dest = malloc(len+1);
+    strncpy(dest, &input_str[start], len);
+//    dest[len] = '\0';
+//    printf("sub_input_str: %s\n",dest);
+}
+char** ft_split(const char* input_str, char token)
+{
+    int start = 0;
+    int pos = 0;
+    int temp_size = ft_strlen(input_str);
+    int elem_count = 0;
+    char **result;
+
+	result = malloc(ft_strlen(input_str));
 	
-	count = 0;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] != c)
-			i++;
-		count++;
-		i++;
-	}
-	if (s[ft_strlen(s)] == c)
-		return (count);
-	return (count + 1);
-}
-*/
+    while (pos != -1)
+    {
+        pos = find_str_pos(input_str, pos, token);
 
+        if (pos != -1) 
+        {
+            pos++;
+            temp_size = pos -1 - start;
+            if (temp_size > 0)
+            {
+                get_substr(input_str, result[elem_count], start, temp_size);
+            }
+            start = pos;
+        } else
+        {
+            get_substr(input_str, result[elem_count], start, temp_size);     
+        }
+     elem_count++;
+    }
 
-static	int	find_position(char *s, char c)
-{
-	char	*ptr;
-
-	while (s)
-	{
-		if (ft_strchr(s, c) != 0)
-			return (ptr)
-	}
-	return (0);
-}
-
-
-char **ft_split(char const *s, char c)
-{
-	char	**result;
-	char	*ptr;
-	int	i;
-	int	j;
-	
-	i = 0;
-	j = 0;
-	if (ft_strchr(s, c) != 0)
-	{
-		while (i <= ft_)	
-		while (s[i] != ptr)
-		{
-			result[j][i] =s[i];
-			i++;
-		}
-		j++;
-		
-	}
-
-}
-
+//    result[elem_count] = "";
+    return result;
+} 
 /*
-int main ()
+int main(int argc, char const *argv[])
 {
-	char *s = "bananastrawberrylemonade";
-	char c = a;
+    const char* input_str = "abxcdxxefxgh";
+    char c = 'x';
+
+    printf("original: %s\n", input_str);
+    char** res = ft_split(input_str, c);
+
+    free(res);
+
+    return 0;
 }
 */

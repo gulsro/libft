@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
+
 static	int	int_len(int n)
 {
 	int	count;
@@ -29,13 +28,14 @@ static	int	int_len(int n)
 	}
 	return (count);
 }
+
 char	*ft_itoa(int n)
 {
 	int	len;
 	int	numb;
 	char	*s;
 
-	numb = n;	
+	numb = n;
 	len = int_len(n);
 	if (n < 0)
 		numb = n * -1;
@@ -43,10 +43,7 @@ char	*ft_itoa(int n)
 	if (s == NULL)
 		return (NULL);
 	if (n == -2147483648)
-	{
-		memcpy(s, "-2147483648", 12);		//	s = "-2147483648"
-		return (s);
-	}
+		return (ft_memcpy(s, "-2147483648", 12));
 	while (len >= 1)
 	{
 		s[len - 1] = numb % 10 + '0';
@@ -57,9 +54,7 @@ char	*ft_itoa(int n)
 	len = int_len(n);
 	s[len] = '\0';
 	if (n < 0)
-	{
 		s[0] = '-';
-	}
 	return (s);
 }
 /*
