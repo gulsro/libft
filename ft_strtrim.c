@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:33:17 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/27 16:41:45 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/10/31 18:24:32 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	
 	start = 0;
 	temp = (char *)s1;
-	end = strlen(temp) - 1;
+	end = ft_strlen(temp) - 1;
 	if (!s1)
-			return (0);
+		return (0);	
+//	if (s1[0] == '\0')
+//		return ()
 	if (!set)
-			return (temp);
-	while (temp[start] && strchr(set, temp[start]))
+		return (temp);
+	while (temp[start]  && ft_strchr(set, temp[start]))
 			start++;
-	while (temp[end] && strchr(set, temp[end]))
+	while (start < end  && ft_strchr(set, temp[end]))
 			end--;
 	newstr = ft_substr(temp, start, (end - start + 1));
 	return (newstr);
@@ -38,7 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int main()
 {
-	char const s1[] = "";
+	char const s1[] = NULL;
 	char const set[] = "";
 	printf("%s\n", ft_strtrim(s1, set));
 }
