@@ -6,12 +6,10 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 15:33:17 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/31 18:24:32 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/01 17:30:31 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -26,8 +24,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(temp) - 1;
 	if (!s1)
 		return (0);	
-//	if (s1[0] == '\0')
-//		return ()
 	if (!set)
 		return (temp);
 	while (temp[start]  && ft_strchr(set, temp[start]))
