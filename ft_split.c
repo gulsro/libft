@@ -27,7 +27,7 @@ static int	how_many_words(const char *str, char c)
 static int	word_length(const char *str, char c)
 {
 	int	i;
-	int	count;
+	int	count; //***
 
 	i = 0;
 	count = 0;
@@ -56,8 +56,6 @@ static char *make_substr(const char *str, char c)
 	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (0);
-	//while (str[i] == c)
-	//	i++;
 	while (str[i] != '\0' && str[i] != c)
 	{
 		sub[j] = str[i];
@@ -68,18 +66,17 @@ static char *make_substr(const char *str, char c)
 	return (sub);
 }
 
-static void	*free_array(char **arr)
+static void	free_array(char **arr, int i)
 {
-	int	i;
+	//int	i;
 
-	i = 0;
-	while (arr[i])
+	//i = 0;
+	while (i)
 	{
 		free(arr[i]);
-		i++;
+		i--;
 	}
 	free(arr);
-	return (NULL);
 }
 
 char **ft_split(char const *s, char c)
@@ -94,6 +91,7 @@ char **ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	words = how_many_words(s, c);
+//	printf("\nwords=%d\n",words);
 	arr = (char**)malloc(sizeof(char *) * words + 1);
 	if (!arr)
 		return (0);
@@ -101,27 +99,26 @@ char **ft_split(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		arr[arr_i] = make_substr(s + i, c); //******
+		arr[arr_i] = make_substr(s + i, c); 
 		if (!arr[arr_i])
-			free_array(arr);
+			free_array(arr, arr_i);
 		i = i + word_length(s + i, c);
 		arr_i++;
-//		while (s[i] == c)
-//			i++;
 	}
 	arr[arr_i] = NULL;
 	return (arr);
 }
+
 /*
 int main()
 {
 	char **arr;
-	char const *s = "xxlexmoxx";
-	char c = 'x';
+	char const *s = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
+	char c = ' ';
 	int	i;
 	i = 0;
-	arr = ft_split(s, c);
-	while (i < 3)
+	arr = ft_split("  hell o!", ' ');
+	while (arr[i])
 	{
 		printf("%s\n", arr[i]);
 		i++;
