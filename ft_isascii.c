@@ -9,10 +9,7 @@
 /*   Updated: 2022/10/17 14:27:29 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_isascii(int c)
 {
