@@ -18,17 +18,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*newstr;
 	char	*temp;
-	
+
 	start = 0;
 	temp = (char *)s1;
 	end = ft_strlen(temp) - 1;
 	if (!s1)
-		return (0);	
+		return (0);
 	if (!set)
 		return (temp);
-	while (temp[start]  && ft_strchr(set, temp[start]))
+	while (temp[start] && ft_strchr(set, temp[start]))
 			start++;
-	while (start < end  && ft_strchr(set, temp[end]))
+	while (start < end && ft_strchr(set, temp[end]))
 			end--;
 	newstr = ft_substr(temp, start, (end - start + 1));
 	return (newstr);

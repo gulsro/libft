@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "libft.h"
 
 static int	how_many_words(const char *str, char c)
@@ -27,7 +26,7 @@ static int	how_many_words(const char *str, char c)
 static int	word_length(const char *str, char c)
 {
 	int	i;
-	int	count; //***
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -41,9 +40,9 @@ static int	word_length(const char *str, char c)
 	return (count);
 }
 
-static char *make_substr(const char *str, char c) 
+static char	*make_substr(const char *str, char c)
 {
-	char *sub;
+	char	*sub;
 	int	i;
 	int	j;
 	int	len;
@@ -68,9 +67,6 @@ static char *make_substr(const char *str, char c)
 
 static void	free_array(char **arr, int i)
 {
-	//int	i;
-
-	//i = 0;
 	while (i)
 	{
 		free(arr[i]);
@@ -79,9 +75,9 @@ static void	free_array(char **arr, int i)
 	free(arr);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **arr;
+	char	**arr;
 	int	i;
 	int	words;
 	int	arr_i;
@@ -91,15 +87,14 @@ char **ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	words = how_many_words(s, c);
-//	printf("\nwords=%d\n",words);
-	arr = (char**)malloc(sizeof(char *) * words + 1);
+	arr = (char**)ft_calloc(sizeof(char *), words + 1);
 	if (!arr)
 		return (0);
 	while (s[i] != '\0' && arr_i < words) 
 	{
 		while (s[i] == c)
 			i++;
-		arr[arr_i] = make_substr(s + i, c); 
+		arr[arr_i] = make_substr(s + i, c);
 		if (!arr[arr_i])
 			free_array(arr, arr_i);
 		i = i + word_length(s + i, c);
