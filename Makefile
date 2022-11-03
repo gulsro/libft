@@ -6,7 +6,7 @@
 #    By: gozturk <gozturk@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/11 18:39:50 by gozturk       #+#    #+#                  #
-#    Updated: 2022/11/03 13:30:08 by gozturk       ########   odam.nl          #
+#    Updated: 2022/11/03 16:19:34 by gozturk       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,23 +63,28 @@ CFLAGS = -Wall -Werror -Wextra -g
 
 OBJ = $(SRC:.c=.o)
 
+OBJB = $(SRCB:.c=.o)
+
 %.o : %.c
 			$(CC) $(CFLAGS) -c $< -o $@
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+bonus :
+		$(MAKE) $(OBJB)
+
+$(NAME) : $(OBJ) $(OBJB)
 			ar rc $@ $? 
 
 clean :
-			rm -f $(OBJ)
+			rm -f $(OBJ) $(OBJB)
 
 fclean :	clean
 			rm -f $(NAME)
 
 re : fclean all
 
-.PHONY = all clean fclean re
+.PHONY = all clean fclean re bonus
 
 
 
