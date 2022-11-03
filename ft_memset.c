@@ -6,15 +6,14 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/13 11:57:08 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/17 14:14:51 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/03 14:50:38 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*bptr;
 
 	bptr = b;

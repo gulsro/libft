@@ -6,12 +6,11 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 14:53:39 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/25 16:25:46 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/03 14:57:44 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -19,7 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 
 	i = 0;
-	src_len = strlen(src);
+	src_len = ft_strlen(src);
 	if (dstsize == 0)
 		return (src_len);
 	if (dstsize <= src_len + 1)
@@ -33,10 +32,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		return (src_len);
 	}
 	while (src[i] != '\0')
-		{
-			dst[i] = src[i];
-			i++;
-		}
+	{
+		dst[i] = src[i];
+		i++;
+	}
 	dst[i] = '\0';
 	return (src_len);
 }

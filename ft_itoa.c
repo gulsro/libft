@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/18 17:40:10 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/24 16:20:55 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/03 14:48:06 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ static	int	int_len(int n)
 
 char	*ft_itoa(int n)
 {
-	int	len;
-	int	numb;
+	int		len;
+	int		numb;
 	char	*s;
 
 	numb = n;

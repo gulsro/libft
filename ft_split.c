@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/03 13:32:43 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/11/03 14:35:56 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/03 14:52:51 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ static char	**free_array(char **arr, int i)
 	{
 		i--;
 		free(arr[i]);
-	//	i--;
 	}
 	free(arr);
 	return (0);
@@ -109,11 +108,10 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		arr[arr_i] = make_substr(s + i, c);
-		if (!arr[arr_i]) 
-			return(free_array(arr, arr_i));
+		if (!arr[arr_i])
+			return (free_array(arr, arr_i));
 		i = i + word_length(s + i, c);
 		arr_i++;
 	}
 	return (arr);
 }
-

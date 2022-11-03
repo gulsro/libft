@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strchr.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: gozturk <marvin@codam.nl>                    +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/11/03 14:53:00 by gozturk       #+#    #+#                 */
+/*   Updated: 2022/11/03 14:53:49 by gozturk       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -6,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	int	len_s;
 
 	i = 0;
-	len_s = strlen(s) + 1; 
+	len_s = ft_strlen(s) + 1;
 	while (i < len_s)
 	{
 		if (s[i] == (char)c)

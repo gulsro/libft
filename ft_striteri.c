@@ -6,14 +6,14 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 14:35:27 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/25 15:11:28 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/03 14:47:32 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
-	
+
 	i = 0;
 	while (s[i])
 	{
