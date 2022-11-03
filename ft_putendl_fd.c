@@ -1,12 +1,22 @@
-#include <unistd.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_putendl_fd.c                                    :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: gozturk <marvin@codam.nl>                    +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/11/03 12:27:19 by gozturk       #+#    #+#                 */
+/*   Updated: 2022/11/03 12:28:48 by gozturk       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	len;
-	
-	len = strlen(s);
+
+	len = ft_strlen(s);
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

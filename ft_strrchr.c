@@ -1,12 +1,21 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strrchr.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: gozturk <marvin@codam.nl>                    +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/11/03 12:53:37 by gozturk       #+#    #+#                 */
+/*   Updated: 2022/11/03 12:54:21 by gozturk       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-//	int	i;
 	int	len;
 
-//	i = 0;
 	len = ft_strlen(s);
 	while (0 <= len)
 	{

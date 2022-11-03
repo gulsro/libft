@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_split.c                                         :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: gozturk <marvin@codam.nl>                    +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/11/03 13:32:43 by gozturk       #+#    #+#                 */
+/*   Updated: 2022/11/03 14:35:56 by gozturk       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	how_many_words(const char *str, char c)
@@ -43,9 +55,9 @@ static int	word_length(const char *str, char c)
 static char	*make_substr(const char *str, char c)
 {
 	char	*sub;
-	int	i;
-	int	j;
-	int	len;
+	int		i;
+	int		j;
+	int		len;
 
 	i = 0;
 	j = 0;
@@ -65,59 +77,43 @@ static char	*make_substr(const char *str, char c)
 	return (sub);
 }
 
-static void	free_array(char **arr, int i)
+static char	**free_array(char **arr, int i)
 {
 	while (i)
 	{
-		free(arr[i]);
 		i--;
+		free(arr[i]);
+	//	i--;
 	}
 	free(arr);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	int	i;
-	int	words;
-	int	arr_i;
+	int		i;
+	int		words;
+	int		arr_i;
 
 	i = 0;
 	arr_i = 0;
 	if (!s)
 		return (0);
 	words = how_many_words(s, c);
-	arr = (char**)ft_calloc(sizeof(char *), words + 1);
+	arr = ft_calloc(sizeof(char *), words + 1);
 	if (!arr)
 		return (0);
-	while (s[i] != '\0' && arr_i < words) 
+	while (s[i] != '\0' && arr_i < words)
 	{
 		while (s[i] == c)
 			i++;
 		arr[arr_i] = make_substr(s + i, c);
-		if (!arr[arr_i])
-			free_array(arr, arr_i);
+		if (!arr[arr_i]) 
+			return(free_array(arr, arr_i));
 		i = i + word_length(s + i, c);
 		arr_i++;
 	}
-	arr[arr_i] = NULL;
 	return (arr);
 }
 
-/*
-int main()
-{
-	char **arr;
-	char const *s = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse";
-	char c = ' ';
-	int	i;
-	i = 0;
-	arr = ft_split("  hell o!", ' ');
-	while (arr[i])
-	{
-		printf("%s\n", arr[i]);
-		i++;
-	}
-	printf("%d\n", i);
-}
-*/

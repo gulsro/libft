@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strncmp.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: gozturk <marvin@codam.nl>                    +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/11/03 12:29:07 by gozturk       #+#    #+#                 */
+/*   Updated: 2022/11/03 12:29:48 by gozturk       ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t		i;
+	size_t			i;
 	unsigned char	first_s;
 	unsigned char	second_s;
 
