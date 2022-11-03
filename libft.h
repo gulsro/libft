@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 15:32:47 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/11/03 15:03:43 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/03 15:06:09 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <string.h>
 # include <limits.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
