@@ -6,13 +6,11 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/08 15:43:31 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/08 15:49:13 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/04 15:21:01 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_isprint(int c)
 {

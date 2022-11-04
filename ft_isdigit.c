@@ -6,13 +6,11 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/06 15:40:09 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/06 17:13:55 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/04 15:20:39 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_isdigit(int c)
 {

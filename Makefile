@@ -6,7 +6,7 @@
 #    By: gozturk <gozturk@student.codam.nl>           +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/11 18:39:50 by gozturk       #+#    #+#                  #
-#    Updated: 2022/11/04 11:48:21 by gozturk       ########   odam.nl          #
+#    Updated: 2022/11/04 14:20:49 by gozturk       ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,8 +54,7 @@ SRCB = ft_lstnew.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c
+			ft_lstiter.c 
 
 CC = cc
 

@@ -6,13 +6,11 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/08 15:49:43 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/08 16:46:51 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/04 15:27:18 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {

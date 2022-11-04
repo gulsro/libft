@@ -6,12 +6,11 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/25 15:46:31 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/10/25 16:24:55 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/04 15:28:07 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -19,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	unsigned int	len;
 
-	len = strlen(s);
+	len = ft_strlen(s);
 	i = 0;
 	str = malloc((len + 1));
 	if (!str)
