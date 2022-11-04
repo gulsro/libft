@@ -6,7 +6,7 @@
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/03 15:43:22 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/11/03 16:21:20 by gozturk       ########   odam.nl         */
+/*   Updated: 2022/11/04 11:51:56 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	nd -> content = content;
 	nd -> next = NULL;
-	return (nd); 
+	return (nd);
 }
