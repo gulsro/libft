@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstmap.c                                        :+:    :+:            */
+/*   ft_lstiter_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: gozturk <marvin@codam.nl>                    +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/04 17:13:34 by gozturk       #+#    #+#                 */
-/*   Updated: 2022/11/04 18:07:47 by gozturk       ########   odam.nl         */
+/*   Created: 2022/11/07 16:10:55 by gozturk       #+#    #+#                 */
+/*   Updated: 2022/11/07 16:11:04 by gozturk       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*temp;
-	t_list	*new_head;
-	
-	temp = lst;
-	new_head = NULL;
-	if (!lst)
-		return (0);
-	while (temp)
+	t_list	*new;
+
+	new = lst;
+	while (new)
 	{
-		content = f(temp->content);
-		new_head = ft_lstnew(content);
-		
-		temp->next = next;
-		del;
-		temp = temp->next;
+		f(new->content);
+		new = new->next;
 	}
-	
 }
